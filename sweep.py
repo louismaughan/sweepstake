@@ -2,10 +2,10 @@ import streamlit as st
 import random
 import pandas as pd
 
-st.set_page_config(page_title="Sweepstake Picker", page_icon="🎲")
+st.set_page_config(page_title="World Cup sweepstake", page_icon="🎲")
 
-st.title("🎲 Methods digital World Cup sweepstake")
-st.write("Enter your participants and items to assign them randomly.")
+st.title("🎲 Methods Digital World Cup 2026 sweepstake")
+st.write("Enter your players and teams to assign them randomly.")
 
 # Layout: Two columns for data entry
 col1, col2 = st.columns(2)
@@ -22,7 +22,7 @@ with col2:
         placeholder="Brazil\nFrance\nEngland"
     )
 
-if st.button("Run Sweepstake"):
+if st.button("Run sweepstake"):
     # Clean the inputs
     participants = [p.strip() for p in participants_input.split('\n') if p.strip()]
     items = [i.strip() for i in items_input.split('\n') if i.strip()]
